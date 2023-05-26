@@ -1,0 +1,133 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+:root {
+    --bg-color: rgba(34, 52, 75, 0.45);
+    --text-color: rgba(255, 255, 255, 0.912);
+    --main-color: rgba(128, 223, 255, 0.955);
+}
+
+header {
+    min-height: 70px;
+    max-height: 75px;
+    background-color: var(--bg-color);
+    //backdrop-filter: blur(10px);
+    backdrop-filter: blur(4px);
+
+    // filter:blur(1px);
+    
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    display: flex;
+	align-items: center;
+	justify-content: space-between;
+	// background: transparent;
+	padding: 28px 12%;
+	transition: all .50s ease;
+    z-index: 2;
+}
+
+
+.nav_left {
+    display: flex;
+    align-items: center;
+    
+}
+
+.navbar {
+    display: flex;
+    padding-left: 30px;
+}
+
+.navbar li {
+    padding: 0px 20px 0px 20px;
+}
+
+.navbar li p {
+    color: var(--text-color);
+    font-size: 1.0rem;
+    font-weight: 600;
+    transition: all .5s ease;
+}
+
+.navbar li p:hover {
+    color: var(--main-color);
+    text-shadow: 0px 0px 2px var(--text-color);
+}
+
+.nav_right button {
+    padding: 3px 10px 3px 10px;
+    margin: 0px 10px 0px 10px;
+    border-radius: 6px;
+    font-size: 16px;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.nav_right button:hover {
+    color: var(--text-color);
+    background-color: rgba(106, 185, 254, 0.521);
+}
+
+.nav_right button i {
+    margin-right: 4px;
+}
+
+.nav_right .btn_github {
+    background-color: rgba(0, 0, 0, 0);
+    border: var(--main-color) 1px solid;
+    
+}
+
+.nav_right .btn_source {
+    background-color: rgba(158, 208, 251, 0.701);
+    border: var(--main-color) 1px solid;
+    
+}
+
+
+
+
+
+@media (max-width: 1100px){
+	header{
+		padding: 14px 2%;
+		transition: .2s;
+	}
+	.navbar p{
+		padding: 5px 0;
+		margin: 0px 20px;
+	}
+}
+
+@media (max-width: 900px) {
+    .navbar{
+		position: absolute;
+		top: 100%;
+		right: -100%;
+		width: 270px;
+		height: 29vh;
+		background: var(--main-color);
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		border-radius: 10px;
+		transition: all .50s ease;
+	}
+    
+    .nav_right {
+        display: none;
+    }
+}
+
+
+
+
